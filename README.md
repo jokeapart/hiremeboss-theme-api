@@ -1,10 +1,8 @@
-# GitBook API Theme
+# Hiremeboss API Doc V1.0
 
-Theme for using GitBook to publish an API documentation.
+Hiremeboss is an automated applicant/candidate analysis, assessment and ranking tool.
 
-This theme works perfectly with search plugins (like [the default plugin](https://github.com/GitbookIO/plugin-search) or [algolia](https://github.com/GitbookIO/plugin-algolia)).
-
-![Screenshot](img/theme-api.png)
+Simply connect any job posting from any job board and identify top candidates without sifting through applicants or interviewing.
 
 It also integrates well with the default fontsettings plugin to use the Dark theme.
 
@@ -49,24 +47,29 @@ While the body of the method block will be used as the definition for your metho
 
 This is great for managing examples in different languages, for instance when documenting multiple API clients.
 
-    {% method %}
-    ## Install {#install}
+```
+<div data-gb-custom-block data-tag="method">
 
-    The first thing is to get the GitBook API client.
+## Install {#install}
 
-    {% sample lang="js" %}
-    ```bash
-    $ npm install gitbook-api
-    ```
+The first thing is to get the GitBook API client.
 
-    {% sample lang="go" %}
-    ```bash
-    $ go get github.com/GitbookIO/go-gitbook-api
-    ```
-    {% endmethod %}
+```
 
-![JS Sample](img/sample-js.png)
-![Go sample](img/sample-go.png)
+````
+```bash
+$ npm install gitbook-api
+```
+
+````
+
+````
+```bash
+$ go get github.com/GitbookIO/go-gitbook-api
+```
+````
+
+![JS Sample](img/sample-js.png) ![Go sample](img/sample-go.png)
 
 On each page containing `method` blocks with samples, a switcher is automatically added at the top-right corner to easily select which language to display.
 
@@ -99,33 +102,20 @@ Most programming languages are supported by default, with name mapping following
 
 Note that a `sample` block can contain any markdown content to be displayed for this language, not only code blocks, as illustrated below.
 
-
 #### Common blocks
 
 Common blocks are used to display content to be displayed for all languages in your examples.
-
-    {% method %}
-    ## Simple method
-
-    {% sample lang="js" %}
-    This text will only appear for JavaScript.
-
-    {% sample lang="go" %}
-    This text will only appear for Go.
-
-    {% common %}
-    This will appear for both JavaScript and Go.
-    {% endmethod %}
-
 
 ### Layout
 
 The theme provides two layouts to display your examples: one-column or two-columns (split).
 
-###### One column layout
+**One column layout**
+
 ![One column](img/one-column.png)
 
-###### Split layout
+**Split layout**
+
 ![Split](img/split.png)
 
 The layout can be toggled from the toolbar using the layout icon: ![Layout icon](img/layout-icon.png)
